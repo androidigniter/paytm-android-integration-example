@@ -1,4 +1,4 @@
-package androidigniter.com.paytmpaymentexample;
+package androidigniter.paytmpayment;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("androidigniter.com.paytmpaymentexample", appContext.getPackageName());
+        assertEquals("androidigniter.paytmpayment", appContext.getPackageName());
     }
 }

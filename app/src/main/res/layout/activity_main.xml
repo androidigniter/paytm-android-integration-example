@@ -1,76 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="8dp"
-    tools:context="androidigniter.com.paytmpaymentexample.MainActivity">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="130dp"
-        android:layout_height="120dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/iphone_6"
-        android:padding="4dp" />
-
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/imageView"
-        android:text="Apple iPhone 6 (Gold, 32 GB)"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-        android:textColor="#000000" />
+        android:orientation="vertical"
+        android:weightSum="1">
 
-    <TextView
-        android:id="@+id/textViewShortDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewTitle"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/imageView"
-        android:text="Gold, 32 GB"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewRating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewShortDesc"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/imageView"
-        android:background="@color/colorPrimary"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:text="4.7"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-        android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Learn with Android Igniter"
+                android:textStyle="bold"
+                android:textSize="20dip"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dip"/>
 
-    <TextView
-        android:id="@+id/textViewPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewRating"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/imageView"
-        android:text="10.00"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="www.androidigniter.com"/>
 
-    <Button
-        android:id="@+id/buttonBuy"
-        android:layout_toRightOf="@id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewPrice"
-        android:text="Buy" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paytm Integrations"
+                android:textStyle="bold"
+                android:textSize="24dip"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dip"/>
 
-</RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/orderid"
+            android:hint="Order ID"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/custid"
+            android:hint="Customer ID"/>
+
+
+        <Button
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_transaction"
+            android:text="Start Payment"
+            android:onClick="onStartTransaction"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="16dip"
+            android:layout_marginTop="30dip"
+            android:layout_weight="2.05" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,4 +1,4 @@
-package androidigniter.com.paytmpaymentexample;
+package androidigniter.paytmpayment;
 
 import org.junit.Test;
 
